@@ -1,15 +1,16 @@
 # Project Structure
 
-- This project is using the mainstream create react app by facebook as a base 
-- The code is currently deployed using surge.sh at endpoint: http://rapid-drain.surge.sh/ 
+- This project is using the mainstream `create-react-app` by facebook as a base 
+- The code is currently deployed using `surge.sh` at endpoint: http://rapid-drain.surge.sh/ 
 (I have kept it http as the websocket is connection is on http so it will throw mix content error if you try running the frontend on https, so to make frontend work on https we need to have wss instead of ws)
 - The time taken to built it was 6.5 hrs & 2 hrs for refinement and UI/UX enhancements
 and 20 mins for deployment
 - I have used npm package [recharts](https://www.npmjs.com/package/recharts) for graphs/charts in the project 
-- Web socket url is being injected via .env file, its not pushed on repo to run it locally create .env file and add the socket value to env variable REACT_APP_WEBSOCKET_URL: "<ws url comes here>"
-- All the utility/shared code belongs under utils folder
-- Constant has all the static values of data 
-- Components as Usual contains the main component i.e. AirQualityMonitor.tsx which then imports child components Table.tsx & Graph.tsx , that's for maintaining the modularity & separation of concerns in the codebase
+- Web socket url is being injected via .env file, its not pushed on repo to run it locally create .env file and add the socket value to env variable `REACT_APP_WEBSOCKET_URL: "<ws url comes here>"`
+- All the utility/shared code belongs under `utils` folder
+- `constant` folder has all the static values of data 
+- `components` folder as usual contains the main component i.e. `AirQualityMonitor.tsx` which then imports child components `Table.tsx` & `Graph.tsx` , that's for maintaining the modularity & separation of concerns in the codebase
+- The latest code is at `master` branch itself 
 
 
 
